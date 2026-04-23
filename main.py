@@ -25,10 +25,17 @@ def ask_total_delivery():
                 return distance
         except ValueError:
             print("Invalid input. Please enter a valid number.")
+            
 # gets the cargo weight for each robot(between 1 and 50 kg)
 def ask_cargo_weight():
     while True:
-    
+        try:
+            weight = float(input("Enter the cargo weight (1-50 kg): "))
+            if 1 <= weight <= 50:
+                return weight
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
+
 # gets the weather condition( "Clear", "Rain", or "Storm")
 
 # If distance is over 300km, any robot carries more than 50 kg, or the weather is Storm
