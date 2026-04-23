@@ -25,7 +25,7 @@ def ask_total_delivery():
                 return distance
         except ValueError:
             print("Invalid input. Please enter a valid number.")
-            
+
 # gets the cargo weight for each robot(between 1 and 50 kg)
 def ask_cargo_weight():
     while True:
@@ -37,9 +37,26 @@ def ask_cargo_weight():
             print("Invalid input. Please enter a valid number.")
 
 # gets the weather condition( "Clear", "Rain", or "Storm")
+def ask_weather():
+    while True:
+        weather = input("Enter the weather condition (Clear, Rain, or Storm): ").strip()
+        if weather in ["Clear", "Rain", "Storm"]:
+            return weather
+        else:
+            print("Invalid input. Please enter a valid weather condition.")
 
 # If distance is over 300km, any robot carries more than 50 kg, or the weather is Storm
+def is_deployment_safe(distance, cargo_weights, weather):
+    if distance > 300:
+        return False
+    if any(weight > 50 for weight in cargo_weights):
+        return False
+    if weather == "Storm":
+        return False
+    return True
+
 # print "🚨 Deployment Unsafe!"
+
 
 # otherwise. print a summary of robot names, zones, and cargo weights
 
@@ -65,5 +82,5 @@ def main():
 
 
 # Run program
-if __name__ == "__main__":
+if      __name__ == "__main__":
     main()
