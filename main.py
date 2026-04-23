@@ -8,3 +8,20 @@ Otherwise, print a summary of robot names, zones, and cargo weights with the mes
 
 """
 
+# creating a dictionary for the robots and their assigned delivery zones((" Downtown ", " Suburbs ", " Industrial ")
+
+
+
+# gets the total delivery distance from the user (between 5 and 500 km)
+
+# gets the cargo weight for each robot(between 1 and 50 kg)
+
+# gets the weather condition( "Clear", "Rain", or "Storm")
+
+# If distance is over 300km, any robot carries more than 50 kg, or the weather is Storm
+# print "🚨 Deployment Unsafe!"
+
+# otherwise. print a summary of robot names, zones, and cargo weights
+
+# if the conditions are all met, print "🤖 Robots Ready for Delivery!"
+
