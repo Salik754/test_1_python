@@ -10,9 +10,6 @@ Otherwise, print a summary of robot names, zones, and cargo weights with the mes
 """
 
 # creating a dictionary for the robots and their assigned delivery zones((" Downtown ", " Suburbs ", " Industrial ")
-from sympy import deg
-
-
 summary_of_robots = {
     "Max": "Downtown",
     "Advil": "Suburbs",
