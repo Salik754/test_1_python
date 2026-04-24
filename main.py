@@ -20,7 +20,7 @@ summary_of_robots = {
 def ask_total_delivery():
     while True: 
         try: 
-            distance = float(input("Enter the total delivery distance (5-500 km): "))
+            distance = int(input("Enter the total delivery distance (5-500 km): "))
             if 5 <= distance <= 500:
                 return distance
         except ValueError:
@@ -30,7 +30,7 @@ def ask_total_delivery():
 def ask_cargo_weight():
     while True:
         try:
-            weight = float(input("Enter the cargo weight (1-50 kg): "))
+            weight = int(input("Enter the cargo weight (1-50 kg): "))
             if 1 <= weight <= 50:
                 return weight
         except ValueError:
@@ -39,7 +39,7 @@ def ask_cargo_weight():
 # gets the weather condition( "Clear", "Rain", or "Storm")
 def ask_weather():
     while True:
-        weather = input("Enter the weather condition (Clear, Rain, or Storm): ").strip()
+        weather = input("Enter the weather condition (Clear, Rain, or Storm): ").strip().title()
         if weather in ["Clear", "Rain", "Storm"]:
             return weather
         else:
