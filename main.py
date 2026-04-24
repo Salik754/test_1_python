@@ -10,6 +10,9 @@ Otherwise, print a summary of robot names, zones, and cargo weights with the mes
 """
 
 # creating a dictionary for the robots and their assigned delivery zones((" Downtown ", " Suburbs ", " Industrial ")
+from sympy import deg
+
+
 summary_of_robots = {
     "Max": "Downtown",
     "Advil": "Suburbs",
@@ -45,7 +48,7 @@ def ask_weather():
         else:
             print("Invalid input. Please enter a valid weather condition.")
 
-# If distance is over 300km, any robot carries more than 50 kg, or the weather is Storm
+# If distance is over 300km, any robot carries more than 50 kg, or the weather is Storm. print "🚨 Deployment Unsafe!"  otherwise. print a summary of robot names, zones, and cargo weights
 def is_deployment_safe(distance, cargo_weights, weather):
     if distance > 300:
         return False
@@ -55,10 +58,7 @@ def is_deployment_safe(distance, cargo_weights, weather):
         return False
     return True
 
-# print "🚨 Deployment Unsafe!"
 
-
-# otherwise. print a summary of robot names, zones, and cargo weights
 
 # if the conditions are all met, print "🤖 Robots Ready for Delivery!"
 
